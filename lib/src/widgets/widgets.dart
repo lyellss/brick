@@ -1,6 +1,5 @@
 export 'app_bar_basic_widget.dart';
 export 'app_bar_with_body_widget.dart';
-export 'appbar_widget.dart';
 export 'dialog.dart';
 export 'image_widget.dart';
 export 'list_refresh_widget.dart';
