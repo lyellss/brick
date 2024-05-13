@@ -48,7 +48,7 @@ class AppBarBasicWidget extends StatelessWidget implements PreferredSizeWidget {
   final Color dividerColor;
 
   const AppBarBasicWidget({
-    Key? key,
+    super.key,
     this.title,
     this.backgroundColor,
     this.textColor = const Color(0xFF333333),
@@ -64,8 +64,7 @@ class AppBarBasicWidget extends StatelessWidget implements PreferredSizeWidget {
     this.titleFontWeight = FontWeight.w500,
     this.showDivider = false,
     this.dividerColor = const Color(0xFFEEEEEE),
-  })  : assert(title != null || leading != null),
-        super(key: key);
+  })  : assert(title != null || leading != null);
 
   @override
   Size get preferredSize =>

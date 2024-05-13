@@ -33,7 +33,7 @@ class TextPlain extends StatelessWidget {
   });
 
   const TextPlain.textNormal({
-    Key? key,
+    super.key,
     required this.text,
     required this.size,
     this.color,
@@ -42,10 +42,10 @@ class TextPlain extends StatelessWidget {
     this.maxLines,
     this.overflow,
     this.fontWeight = FontWeight.w400,
-  }) : super(key: key);
+  });
 
   const TextPlain.textMedium({
-    Key? key,
+    super.key,
     required this.text,
     required this.size,
     this.color,
@@ -54,10 +54,10 @@ class TextPlain extends StatelessWidget {
     this.maxLines,
     this.overflow,
     this.fontWeight = FontWeight.w500,
-  }) : super(key: key);
+  });
 
   const TextPlain.textSemiBold({
-    Key? key,
+    super.key,
     required this.text,
     required this.size,
     this.color,
@@ -66,10 +66,10 @@ class TextPlain extends StatelessWidget {
     this.maxLines,
     this.overflow,
     this.fontWeight = FontWeight.w600,
-  }) : super(key: key);
+  });
 
   const TextPlain.textBold({
-    Key? key,
+    super.key,
     required this.text,
     required this.size,
     this.color,
@@ -78,7 +78,7 @@ class TextPlain extends StatelessWidget {
     this.maxLines,
     this.overflow,
     this.fontWeight = FontWeight.w700,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

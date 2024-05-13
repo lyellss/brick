@@ -16,7 +16,7 @@ class ImageWidget extends StatelessWidget {
 
   final double radius;
 
-  const ImageWidget({
+  const ImageWidget({super.key, 
     required this.image,
     this.squareSize,
     this.size,
@@ -35,7 +35,7 @@ class ImageWidget extends StatelessWidget {
         child: InkWell(
           onTap: onTap,
           child: Container(
-            padding: paddingInsets ?? EdgeInsets.all(4),
+            padding: paddingInsets ?? const EdgeInsets.all(4),
             child: Image.asset(
               image.png,
               width: squareSize ?? size!.width,

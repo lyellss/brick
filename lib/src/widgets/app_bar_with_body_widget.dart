@@ -12,11 +12,11 @@ class AppBarWithBodyWidget extends StatelessWidget {
   final bool fillBody;
 
   const AppBarWithBodyWidget({
-    Key? key,
+    super.key,
     required this.appbar,
     required this.body,
     this.fillBody = true,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

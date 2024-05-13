@@ -78,7 +78,7 @@ class ListRefreshWidget<T> extends StatefulWidget {
   final SliverGridDelegate? gridDelegate;
 
   const ListRefreshWidget({
-    Key? key,
+    super.key,
     this.padding = EdgeInsets.zero,
     this.enableLoadMore = false,
     this.enableRefresh = true,
@@ -94,7 +94,7 @@ class ListRefreshWidget<T> extends StatefulWidget {
     this.onRefreshCompleted,
     this.physics = const BouncingScrollPhysics(),
     this.gridDelegate,
-  }) : super(key: key);
+  });
 
   @override
   State<ListRefreshWidget<T>> createState() => _ListRefreshWidgetState<T>();

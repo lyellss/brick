@@ -34,7 +34,7 @@ class LoadDataWidget<T> extends StatefulWidget {
   final VoidCallback? onLoadFailure;
 
   const LoadDataWidget({
-    Key? key,
+    super.key,
     required this.loader,
     required this.builder,
     this.autoLoad = true,
@@ -43,7 +43,7 @@ class LoadDataWidget<T> extends StatefulWidget {
     this.failureBuilder,
     this.onLoadComplete,
     this.onLoadFailure,
-  }) : super(key: key);
+  });
 
   @override
   State<LoadDataWidget<T>> createState() => _LoadDataWidgetState<T>();

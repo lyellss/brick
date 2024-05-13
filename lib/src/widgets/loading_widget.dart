@@ -9,7 +9,7 @@ class LoadingWidget extends StatelessWidget {
 
   final Color color;
 
-  const LoadingWidget({
+  const LoadingWidget({super.key, 
     this.size = 64,
     this.color = colorFFFFFFFF,
   });
@@ -24,8 +24,8 @@ class LoadingWidget extends StatelessWidget {
         height: size,
         width: size,
         child: defaultTargetPlatform == TargetPlatform.iOS
-            ? CupertinoActivityIndicator()
-            : CircularProgressIndicator(),
+            ? const CupertinoActivityIndicator()
+            : const CircularProgressIndicator(),
       ),
     );
   }
@@ -38,7 +38,7 @@ class SpinKitLoadingWidget extends StatelessWidget {
 
   final double circleSize;
 
-  const SpinKitLoadingWidget({
+  const SpinKitLoadingWidget({super.key, 
     this.circleColor = colorFFF5C71C,
     this.backgroundColor = colorFFFFFFFF,
     this.circleSize = 24,

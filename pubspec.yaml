@@ -30,18 +30,21 @@ dependencies:
   pull_to_refresh: ^2.0.0
   share: ^2.0.1
   package_info: ^2.0.0
-  permission_handler: ^10.0.0
-  photo_view: ^0.14.0
+  permission_handler: ^11.3.1
+  photo_view: ^0.15.0
   cached_network_image: ^3.0.0
   flutter_spinkit: ^5.0.0
-  intl: ^0.18.1
+  intl: ^0.19.0
   nil: ^1.1.1
   webview_flutter: ^4.2.3
 
+  uuid: any
+  crypto: any
+  pointycastle: any
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

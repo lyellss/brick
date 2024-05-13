@@ -78,7 +78,7 @@ class FadeRoute extends PageRouteBuilder {
   FadeRoute(this.widget)
       : super(
             // 设置过度时间
-            transitionDuration: Duration(milliseconds: 250),
+            transitionDuration: const Duration(milliseconds: 250),
             // 构造器
             pageBuilder: (
               // 上下文和动画

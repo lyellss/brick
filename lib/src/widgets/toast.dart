@@ -23,7 +23,7 @@ void showMyToast(
 class MyToast extends StatelessWidget {
   final Widget child;
 
-  const MyToast({Key? key, required this.child}) : super(key: key);
+  const MyToast({super.key, required this.child});
 
   @override
   Widget build(BuildContext context) {

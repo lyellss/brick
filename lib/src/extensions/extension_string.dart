@@ -6,7 +6,7 @@ extension ExtensionString on String {
   String get img => "assets/images/$this";
 
   double get asDouble {
-    if (this.isEmpty) {
+    if (isEmpty) {
       return 0.0;
     }
     try {
@@ -21,7 +21,7 @@ extension ExtensionString on String {
   }
 
   int get asInt {
-    if (this.isEmpty) {
+    if (isEmpty) {
       return 0;
     }
     try {
@@ -36,11 +36,11 @@ extension ExtensionString on String {
   }
 
   bool equalsIgnoreCase(String other) {
-    return this.toUpperCase() == other.toUpperCase();
+    return toUpperCase() == other.toUpperCase();
   }
 
   bool containsIgnoreCase(String other) {
-    return this.toUpperCase().contains(other.toUpperCase());
+    return toUpperCase().contains(other.toUpperCase());
   }
 
   String get png => 'assets/images/$this.png';

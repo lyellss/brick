@@ -131,9 +131,9 @@ class LoadingDialogWrapper<T> extends StatefulWidget {
   final Widget child;
 
   const LoadingDialogWrapper({
-    Key? key,
+    super.key,
     required this.child,
-  }) : super(key: key);
+  });
 
   @override
   State createState() => _LoadingDialogWrapperState();

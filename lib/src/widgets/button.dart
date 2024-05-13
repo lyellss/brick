@@ -41,7 +41,7 @@ class BasicButton extends StatelessWidget {
   final EdgeInsets? padding;
 
   const BasicButton({
-    Key? key,
+    super.key,
     this.width = double.maxFinite,
     this.height = double.maxFinite,
     this.onTap,
@@ -55,11 +55,11 @@ class BasicButton extends StatelessWidget {
     this.borderColor,
     this.borderSize = 1,
     this.padding,
-  }) : super(key: key);
+  });
 
   /// 默认最小尺寸
   const BasicButton.min({
-    Key? key,
+    super.key,
     this.onTap,
     this.color = Colors.white,
     this.radius = 200,
@@ -73,7 +73,7 @@ class BasicButton extends StatelessWidget {
     this.width,
     this.height,
     this.padding,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

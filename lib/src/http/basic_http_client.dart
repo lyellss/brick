@@ -15,9 +15,9 @@ abstract class BasicHttpClient {
   static const int sendTimeout = 60000;
 
   final Dio _dio = Dio(BaseOptions(
-    connectTimeout: Duration(milliseconds: connectTimeout),
-    receiveTimeout: Duration(milliseconds: receiveTimeout),
-    sendTimeout: Duration(milliseconds: sendTimeout),
+    connectTimeout: const Duration(milliseconds: connectTimeout),
+    receiveTimeout: const Duration(milliseconds: receiveTimeout),
+    sendTimeout: const Duration(milliseconds: sendTimeout),
   ));
 
   /// 请求base url
