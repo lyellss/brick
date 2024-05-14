@@ -64,7 +64,7 @@ class AppBarBasicWidget extends StatelessWidget implements PreferredSizeWidget {
     this.titleFontWeight = FontWeight.w500,
     this.showDivider = false,
     this.dividerColor = const Color(0xFFEEEEEE),
-  })  : assert(title != null || leading != null);
+  }) : assert(title != null || leading != null);
 
   @override
   Size get preferredSize =>

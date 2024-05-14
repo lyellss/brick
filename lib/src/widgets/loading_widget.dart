@@ -9,7 +9,8 @@ class LoadingWidget extends StatelessWidget {
 
   final Color color;
 
-  const LoadingWidget({super.key, 
+  const LoadingWidget({
+    super.key,
     this.size = 64,
     this.color = colorFFFFFFFF,
   });
@@ -38,7 +39,8 @@ class SpinKitLoadingWidget extends StatelessWidget {
 
   final double circleSize;
 
-  const SpinKitLoadingWidget({super.key, 
+  const SpinKitLoadingWidget({
+    super.key,
     this.circleColor = colorFFF5C71C,
     this.backgroundColor = colorFFFFFFFF,
     this.circleSize = 24,

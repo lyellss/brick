@@ -16,7 +16,8 @@ class ImageWidget extends StatelessWidget {
 
   final double radius;
 
-  const ImageWidget({super.key, 
+  const ImageWidget({
+    super.key,
     required this.image,
     this.squareSize,
     this.size,

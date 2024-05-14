@@ -1,7 +1,5 @@
+import 'package:brick/brick.dart';
 import 'package:flutter/material.dart';
-import 'dart:async';
-
-import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +13,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
+  final String _platformVersion = 'Unknown';
 
   @override
   void initState() {
@@ -25,14 +23,32 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      navigatorObservers: [FlutterSmartDialog.observer],
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: Text('Running on: $_platformVersion\n'),
+          child: TapMaterial(
+              onTap: () {
+                showLoadingWithBlock(
+                  forceCallback: true,
+                  onSuccess: (value) {
+                    debugPrint('showLoadingWithBlock onSuccess $value');
+                  },
+                  onFailure: (e) {
+                    debugPrint('showLoadingWithBlock onFailure $e');
+                  },
+                  onLoading: () async {
+                    await Future.delayed(Duration(seconds: 3));
+                    // throw Exception('this is a http exception');
+                  },
+                );
+              },
+              child: Text('Running on: $_platformVersion\n')),
         ),
       ),
+      builder: FlutterSmartDialog.init(),
     );
   }
 }

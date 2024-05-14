@@ -330,6 +330,14 @@ packages:
       url: "https://pub-web.flutter-io.cn"
     source: hosted
     version: "5.9.0"
+  flutter_smart_dialog:
+    dependency: transitive
+    description:
+      name: flutter_smart_dialog
+      sha256: "9b23a0b23b52a259f2901997eaf0b169bf5c61ff2178204872709610e9f6c0be"
+      url: "https://pub-web.flutter-io.cn"
+    source: hosted
+    version: "4.9.6+1"
   flutter_spinkit:
     dependency: transitive
     description:

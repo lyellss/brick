@@ -14,7 +14,7 @@ class TapMaterial extends StatelessWidget {
   const TapMaterial({
     super.key,
     required this.child,
-    required this.onTap,
+    this.onTap,
     this.color = Colors.transparent,
     this.radius = 4,
     this.ripple = true,
