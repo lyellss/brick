@@ -1,7 +1,7 @@
 package com.lyell.brick
 
-import androidx.annotation.NonNull
-
+import android.content.Context
+import android.util.Log
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
@@ -16,7 +16,14 @@ class BrickPlugin : FlutterPlugin, MethodCallHandler {
     /// when the Flutter Engine is detached from the Activity
     private lateinit var channel: MethodChannel
 
+    private lateinit var applicationContext: Context
+
+    companion object {
+        const val TAG = "BrickPlugin"
+    }
+
     override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
+        applicationContext = flutterPluginBinding.applicationContext
         channel = MethodChannel(flutterPluginBinding.binaryMessenger, "brick_channel")
         channel.setMethodCallHandler(this)
     }
@@ -34,12 +41,12 @@ class BrickPlugin : FlutterPlugin, MethodCallHandler {
                 }
                 if (isAppInstalled(openName)) {
                     val openIntent =
-                        pluginBinding!!.applicationContext.packageManager.getLaunchIntentForPackage(
+                        applicationContext.packageManager.getLaunchIntentForPackage(
                             openName
                         )
-                    pluginBinding!!.applicationContext.startActivity(openIntent)
+                    applicationContext.startActivity(openIntent)
                 } else {
-                    Log.i(TAG, "MilePlugin onMethodCall: this package not installed")
+                    Log.i(TAG, "onMethodCall: this package not installed")
                 }
             }
 
@@ -65,7 +72,7 @@ class BrickPlugin : FlutterPlugin, MethodCallHandler {
 
     private fun isAppInstalled(packageName: String): Boolean {
         val openIntent =
-            pluginBinding!!.applicationContext.packageManager.getLaunchIntentForPackage(packageName)
+            applicationContext.packageManager.getLaunchIntentForPackage(packageName)
         return openIntent != null
     }
 }
